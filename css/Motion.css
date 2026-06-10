@@ -1,0 +1,195 @@
+/* ==================== */
+/* MOTION.CSS           */
+/* ==================== */
+
+.breadcrumb-section {
+    background-color: #000000;
+    padding: 120px 0 20px;
+}
+.breadcrumb-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.breadcrumb-container a {
+    color: #999999;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+.breadcrumb-container a:hover { color: #cccccc; }
+.breadcrumb-container span { color: #ffffff; }
+
+/* Titre */
+.motion-hero {
+    background-color: #000000;
+    padding: 60px 0 60px;
+}
+.page-title {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    font-size: 64px;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* Grille 2 colonnes */
+.motion-content {
+    background-color: #000000;
+    padding: 0 0 100px;
+}
+.motion-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* Chaque item = lien cliquable */
+.motion-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Vignette image avec hover */
+.motion-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+.motion-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.motion-item:hover .motion-thumb img {
+    transform: scale(1.05);
+}
+
+/* Overlay hover — identique aux autres pages */
+.photo-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+.motion-item:hover .photo-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+.view-button {
+    padding: 12px 30px; /* était 16px 42px */
+    font-size: 16px;    /* était 20px */
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.view-button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Texte sous la vignette */
+.motion-info h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+.motion-info p {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0;
+}
+.motion-info em { font-style: italic; }
+
+/* ==================== */
+/* RESPONSIVE           */
+/* ==================== */
+@media (max-width: 1200px) {
+    .motion-grid { padding: 0 40px; gap: 20px; grid-template-columns: repeat(2, 1fr); }
+    .breadcrumb-container { padding: 0 40px; }
+    .page-title { font-size: 48px; padding: 0 40px; }
+}
+@media (max-width: 768px) {
+    .motion-grid { grid-template-columns: 1fr; padding: 0 20px; gap: 40px; }
+    .breadcrumb-container { padding: 0 20px; font-size: 16px; }
+    .page-title { font-size: 36px; padding: 0 20px; }
+    .motion-info h2 { font-size: 22px; }
+}
+@media (max-width: 480px) {
+    .page-title { font-size: 28px; padding: 0 15px; }
+    .motion-grid { padding: 0 15px; }
+    .breadcrumb-container { padding: 0 15px; font-size: 16px; }
+    .motion-info h2 { font-size: 18px; }
+    .motion-info p { font-size: 14px; }
+    .view-button { font-size: 16px; padding: 12px 30px; }
+}
+@media (max-width: 768px) {
+    .motion-hero {
+        padding: 20px 0 60px;
+    }
+}
+@media (max-width: 480px) {
+    .motion-hero {
+        padding: 20px 0 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .motion-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        padding: 0 15px !important;
+    }
+    .motion-info h2 {
+        font-size: 14px !important;
+    }
+    .motion-info p {
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 480px) {
+    .motion-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 0 15px !important;
+    }
+    .motion-info h2 {
+        font-size: 13px !important;
+    }
+    .motion-info p {
+        font-size: 11px !important;
+    }
+}

@@ -1,0 +1,455 @@
+.breadcrumb-section-video {
+    background-color: #000000;
+    padding: 120px 0 20px;
+}
+
+.breadcrumb-container-video {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.breadcrumb-container-video a {
+    color: #999999;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-container-video a:hover { color: #cccccc; }
+.breadcrumb-separator-gray { color: #999999 !important; }
+.breadcrumb-separator { color: #ffffff; }
+.breadcrumb-container-video span:not(.breadcrumb-separator-gray) { color: #ffffff; }
+
+/* ===================================================
+   KVU.CSS / TPOCG.CSS — Page projet vidéo
+   Layout : vidéo YT 9:16 à gauche + contenu à droite
+   =================================================== */
+
+/* ---- Breadcrumb — HORS du header, section dédiée ---- */
+.breadcrumb-section {
+    padding: 28px 0 0;          /* espace SOUS le header */
+    background: #0a0a0a;
+    /* On s'assure qu'il n'est pas à l'intérieur du header */
+    display: block;
+    width: 100%;
+}
+
+.breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+/* Liens cliquables : gris + soulignés */
+.breadcrumb-container a {
+    color: #888;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #666;
+    transition: color 0.2s;
+}
+
+.breadcrumb-container a:hover {
+    color: #bbb;
+}
+
+
+/* Nom du projet courant : blanc, non souligné */
+.breadcrumb-container > span:last-child {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ---- Section principale ---- */
+.project-section {
+    background: #0a0a0a;
+    padding: 48px 0 80px;
+    min-height: calc(100vh - 80px);
+}
+
+.project-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* ---- Layout flex : vidéo | contenu ---- */
+.project-video-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+/* ---- Colonne gauche : iframe 9:16 ---- */
+.project-video-left {
+    flex: 0 0 auto;
+}
+
+.video-wrapper-yt {
+    width: 400px;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+.video-wrapper-yt iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+/* ---- Colonne droite : texte ---- */
+.project-video-right {
+    flex: 1;
+    padding-top: 8px;
+}
+
+.project-video-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    margin: 0 0 32px;
+    text-transform: uppercase;
+}
+
+/* ---- Description : 20px ---- */
+.project-video-description {
+    margin-bottom: 28px;
+}
+
+.project-video-description p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #cccccc;
+    line-height: 1.75;
+    margin: 0 0 16px;
+}
+
+.project-video-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---- Infos (Acteurs / Appareil) : 18px ---- */
+.project-video-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 40px;
+    padding-top: 4px;
+}
+
+.project-video-info p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #cccccc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.project-video-info strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ---- Logiciels ---- */
+.tools-label {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px;
+    letter-spacing: -0.5px;
+}
+
+.tools-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tools-icons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tools-icons img {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.tools-icons img:hover {
+    transform: scale(1.05);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .project-video-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .project-video-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .video-wrapper-yt {
+        width: min(300px, 70vw);
+    }
+
+    .project-video-right {
+        width: 100%;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-container {
+        padding: 0 20px;
+    }
+
+    .breadcrumb-container {
+        padding: 0 20px;
+    }
+
+    .project-section {
+        padding: 32px 0 60px;
+    }
+
+    .video-wrapper-yt {
+        width: min(260px, 80vw);
+    }
+
+    .project-video-description p {
+        font-size: 17px;
+    }
+
+    .project-video-info p {
+        font-size: 16px;
+    }
+}
+
+/* ---- pv-breadcrumb (classes utilisées dans le HTML) ---- */
+.pv-breadcrumb {
+    padding: 28px 0 0;
+    background: #0a0a0a;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.pv-breadcrumb a {
+    color: #888;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #666;
+    transition: color 0.2s;
+}
+
+.pv-breadcrumb a:hover {
+    color: #bbb;
+}
+
+.pv-sep {
+    color: #555;
+    margin: 0 6px;
+}
+
+.pv-sep-white {
+    color: #555;
+    margin: 0 6px;
+}
+
+.pv-current {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ---- Section + layout principal ---- */
+.pv-section {
+    background: #000000;
+    padding: 48px 0 80px;
+}
+
+.pv-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.pv-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+.pv-left {
+    flex: 0 0 auto;
+}
+
+.pv-video-wrap {
+    width: 400px;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+.pv-video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.pv-right {
+    flex: 1;
+    padding-top: 8px;
+}
+
+.pv-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    margin: 0 0 32px;
+    text-transform: uppercase;
+}
+
+.pv-desc p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #cccccc;
+    line-height: 1.75;
+    margin: 0 0 16px;
+}
+
+.pv-info {
+    margin-bottom: 32px;
+}
+
+.pv-info p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #cccccc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pv-info strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.pv-tools-label {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px;
+}
+
+.pv-tools-icons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.pv-tools-icons img {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.pv-tools-icons img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .pv-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .pv-left { width: 100%; display: flex; justify-content: center; }
+    .pv-video-wrap { width: min(300px, 70vw); }
+    .pv-right { width: 100%; padding-top: 0; }
+}
+
+@media (max-width: 600px) {
+    .pv-container { padding: 0 20px; }
+    .pv-breadcrumb { padding-left: 20px; }
+    .pv-section { padding: 32px 0 60px; }
+    .pv-video-wrap { width: min(260px, 80vw); }
+    .pv-desc p { font-size: 14px; }
+    .pv-info p { font-size: 12px; }
+}
+/* ---- Fil d'ariane uniformisé mobile ---- */
+@media (max-width: 768px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 480px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+
+/* ---- Fix fil d'ariane mobile long titre ---- */
+@media (max-width: 768px) {
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 480px) {
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb-container-video {
+        padding: 0 15px !important;
+    }
+}

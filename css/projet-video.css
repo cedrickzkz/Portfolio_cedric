@@ -1,0 +1,251 @@
+/* =====================================================
+   PROJET-VIDEO.CSS
+   ===================================================== */
+
+/* ---- Breadcrumb ---- */
+.pv-breadcrumb {
+    padding: 150px 60px 60px 220px; /* haut | droite | bas | gauche */
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.pv-breadcrumb a {
+    color: #888;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #555;
+    transition: color 0.2s ease;
+}
+
+.pv-breadcrumb a:hover {
+    color: #ccc;
+}
+
+.pv-sep {
+    color: #666;
+    margin: 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pv-sep-white {
+    color: #ffffff;
+    margin: 0 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pv-current {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ---- Section contenu ---- */
+.pv-section {
+    background-color: #000000;
+    padding: 0 0 100px 0;
+}
+
+.pv-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* ---- Layout flex ---- */
+.pv-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+}
+
+/* ---- Colonne gauche : vidéo 9:16 ---- */
+.pv-left {
+    flex: 0 0 auto;
+}
+
+.pv-video-wrap {
+    width: 420px;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+
+.pv-video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+/* ---- Colonne droite : texte ---- */
+.pv-right {
+    flex: 1;
+    padding-top: 4px;
+    max-width: 660px;
+}
+
+.pv-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+}
+
+/* Description — 20px */
+.pv-desc {
+    margin-bottom: 24px;
+}
+
+.pv-desc p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #cccccc;
+    line-height: 1.75;
+    margin: 0 0 14px;
+}
+
+.pv-desc p:last-child {
+    margin-bottom: 0;
+}
+
+/* Acteurs / Appareil — 18px */
+.pv-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 40px;
+}
+
+.pv-info p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #cccccc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pv-info strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Logiciels */
+.pv-tools {
+    margin-top: 40px;
+}
+
+.pv-tools-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 40px;
+    letter-spacing: -0.5px;
+}
+
+.pv-tools-icons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pv-tools-icons img {
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.pv-tools-icons img:hover {
+    transform: scale(1.08);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1200px) {
+    .pv-video-wrap {
+        width: 360px;
+    }
+    .pv-right {
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pv-container { padding: 0 40px; }
+    .pv-breadcrumb { padding: 100px 40px 0 40px; }
+    .pv-video-wrap { width: 320px; }
+}
+
+@media (max-width: 900px) {
+    .pv-breadcrumb {
+        justify-content: flex-start;
+    }
+    .pv-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .pv-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .pv-video-wrap {
+        width: min(340px, 75vw);
+    }
+    .pv-right {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .pv-breadcrumb {
+        padding: 85px 20px 0 20px;
+        font-size: 14px;
+    }
+    .pv-container { padding: 0 20px; }
+    .pv-section { padding: 30px 0 80px 0; }
+    .pv-video-wrap { width: min(260px, 80vw); }
+    .pv-desc p { font-size: 17px; }
+    .pv-info p { font-size: 16px; }
+    .pv-tools-label { font-size: 22px; }
+}
+/* ---- Fil d'ariane uniformisé mobile ---- */
+@media (max-width: 768px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 480px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}

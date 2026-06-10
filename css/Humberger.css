@@ -1,0 +1,82 @@
+/* HAMBURGER MENU MOBILE */
+
+@media (max-width: 768px) {
+    /* Afficher le hamburger */
+    .hamburger {
+        display: block !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        width: 30px !important;
+        height: 24px !important;
+        z-index: 100 !important;
+    }
+    
+    /* Lignes du hamburger */
+    .hamburger span {
+        display: block !important;
+        width: 100% !important;
+        height: 2px !important;
+        background: #ffffff !important;
+        margin: 6px 0 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    /* Animation croix - ligne 1 */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px) !important;
+    }
+    
+    /* Animation croix - ligne 2 */
+    .hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    /* Animation croix - ligne 3 */
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px) !important;
+    }
+    
+    /* Cacher la nav et réseaux */
+    .header-nav {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background: #000000 !important;
+        flex-direction: column !important;
+        padding: 80px 20px 20px 20px !important;
+        transform: translateX(100%) !important;
+        transition: transform 0.3s ease !important;
+        z-index: 99 !important;
+        left: auto !important;
+        display: flex !important;
+    }
+    
+    /* Menu ouvert */
+    .header-nav.active {
+        transform: translateX(0) !important;
+    }
+    
+    /* Liens du menu */
+    .header-nav .nav-link {
+        padding: 15px 0 !important;
+        font-size: 18px !important;
+        border-bottom: 1px solid #333333 !important;
+        gap: 0 !important;
+    }
+    
+    /* Réseaux cachés */
+    .social-links {
+        display: none !important;
+    }
+    
+    /* Header container layout */
+    .header .container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+}

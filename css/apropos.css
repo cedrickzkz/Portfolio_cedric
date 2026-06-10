@@ -1,0 +1,190 @@
+/* ==================== */
+/* APROPOS.CSS          */
+/* ==================== */
+.apropos-main { background-color: #000000; }
+
+.apropos-hero {
+    background-color: #000000;
+    padding: 200px 0 20px;
+    min-height: 0 !important;
+    height: auto !important;
+}
+.apropos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+.apropos-title {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+.apropos-section {
+    padding: 40px 0;
+    min-height: 0 !important;
+    height: auto !important;
+}
+.apropos-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+.apropos-image { width: 100%; }
+.apropos-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.apropos-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.apropos-text p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin: 0;
+}
+.apropos-text strong { color: #ffffff; font-weight: 700; }
+.cv-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 16px 42px;
+    border: 3px solid #ffffff;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+.cv-button:hover { background-color: #ffffff; color: #000000; }
+
+/* ==================== */
+/* RESPONSIVE           */
+/* ==================== */
+@media (max-width: 1200px) {
+    .apropos-container { padding: 0 40px; }
+    .apropos-title { font-size: 60px; }
+    .apropos-block { gap: 60px; }
+}
+@media (max-width: 768px) {
+    .apropos-hero { padding: 120px 0 30px; }
+    .apropos-container { padding: 0 20px; }
+    .apropos-title { font-size: 44px; }
+    .apropos-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    /* Bloc 2 : texte d'abord, puis image, puis reste du texte */
+    /* On sépare le texte en deux avec order */
+    .apropos-block .apropos-image {
+        order: 2;
+    }
+    .apropos-block .apropos-text {
+        order: 1;
+    }
+    /* Bloc 2 spécifiquement : image entre les paragraphes */
+    .apropos-section:nth-of-type(2) .apropos-block .apropos-text {
+        order: 1;
+    }
+    .apropos-section:nth-of-type(2) .apropos-block .apropos-image {
+        order: 2;
+    }
+    .apropos-text p { font-size: 17px; }
+}
+@media (max-width: 480px) {
+    .apropos-title { font-size: 36px; }
+    .apropos-container { padding: 0 15px; }
+    .cv-button { font-size: 16px; padding: 14px 32px; }
+}
+
+/* Bloc 2 mobile : texte haut → image → dernier paragraphe + CV */
+@media (max-width: 768px) {
+    .apropos-block-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .apropos-block-2 .apropos-text-top {
+        order: 1;
+    }
+    .apropos-block-2 .apropos-image {
+        order: 2;
+    }
+    /* Le dernier paragraphe et le bouton CV descendent après l'image */
+    .apropos-block-2 .apropos-text-top .apropos-text-bottom {
+        display: none;
+    }
+    .apropos-block-2 .apropos-text-top .cv-button {
+        display: none;
+    }
+}
+
+/* ==================== */
+/* BLOC 2 RESTRUCTURÉ  */
+/* ==================== */
+
+/* Desktop : grid 2 colonnes comme avant */
+.apropos-block-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px 100px;
+    align-items: start;
+}
+.apropos-text-part1 {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.apropos-text-part2 {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.apropos-image-lyon {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+.apropos-image-lyon img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.apropos-text-part1 p,
+.apropos-text-part2 p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin: 0;
+}
+.apropos-text-part1 strong,
+.apropos-text-part2 strong { color: #ffffff; font-weight: 700; }
+
+/* Mobile : colonne unique, image entre les deux blocs de texte */
+@media (max-width: 768px) {
+    .apropos-block-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .apropos-text-part1 p,
+    .apropos-text-part2 p { font-size: 17px; }
+}
+@media (max-width: 480px) {
+    .apropos-text-part1 p,
+    .apropos-text-part2 p { font-size: 16px; }
+}

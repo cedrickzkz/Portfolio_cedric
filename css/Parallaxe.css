@@ -1,0 +1,169 @@
+/* ==================== */
+/* PARALLAXE.CSS */
+/* Structure type Kolaf + galerie 2 colonnes en dessous */
+/* ==================== */
+
+.breadcrumb-section {
+    background-color: #000000;
+    padding: 120px 0 20px;
+}
+.breadcrumb-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    font-size: 20px;
+    color: #999;
+}
+.breadcrumb-container a { color: #999; text-decoration: underline; transition: color 0.3s ease; }
+.breadcrumb-container a:hover { color: #fff; }
+.breadcrumb-container span { color: #ffffff; text-decoration: none; }
+
+.project-hero {
+    background-color: #000000;
+    padding: 60px 0 80px;
+}
+.project-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Vidéo carrée principale à gauche */
+.project-main-video {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-square-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #1a1a1a;
+    position: relative;
+}
+.video-square-wrap video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+/* Contenu droite */
+.project-content { color: #ffffff; }
+.project-title {
+    font-size: 72px;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+.project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+.project-description p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.65;
+    margin: 0;
+}
+.project-tools { margin-top: 10px; }
+.tools-label {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px;
+    letter-spacing: -0.5px;
+}
+.tools-icons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tools-icons img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    object-fit: contain;
+}
+
+/* ---- Galerie 2x2 des autres parallaxes ---- */
+.parallaxe-gallery {
+    background-color: #000000;
+    padding: 0 60px 100px;
+}
+.parallaxe-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.parallaxe-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #1a1a1a;
+}
+.parallaxe-item video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
+@media (max-width: 1024px) {
+    .project-container { padding: 0 40px; gap: 50px; }
+    .breadcrumb-container { padding: 0 40px; }
+    .parallaxe-gallery { padding: 0 40px 80px; }
+    .project-title { font-size: 52px; }
+}
+@media (max-width: 768px) {
+    .project-container { grid-template-columns: 1fr; gap: 40px; padding: 0 15px; }
+    .breadcrumb-container { padding: 0 15px; font-size: 16px; }
+    .parallaxe-gallery { padding: 0 20px 60px; }
+    .project-title { font-size: 40px; }
+    .project-description p { font-size: 14px; }
+}
+@media (max-width: 480px) {
+    .project-title { font-size: 30px; }
+    .project-description p { font-size: 14px; }
+    .parallaxe-grid { grid-template-columns: 1fr; }
+    .tools-icons img { width: 60px; height: 60px; }
+}
+/* ---- Fil d'ariane uniformisé mobile ---- */
+@media (max-width: 768px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 480px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}

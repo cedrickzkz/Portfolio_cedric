@@ -1,0 +1,241 @@
+/* ==================== */
+/* ANC.CSS — page motion 16:9 avec 2 logiciels */
+/* ==================== */
+
+.breadcrumb-section-video {
+    background-color: #000000;
+    padding: 120px 0 20px;
+}
+.breadcrumb-container-video {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    font-size: 20px;
+    color: #999;
+}
+.breadcrumb-container-video a { color: #999; text-decoration: underline; transition: color 0.3s ease; }
+.breadcrumb-container-video a:first-child { color: #999999; text-decoration: underline; }
+.breadcrumb-container-video a:nth-of-type(2) { color: #999999; text-decoration: underline; }
+.breadcrumb-separator-gray { color: #999999 !important; }
+.breadcrumb-separator { color: #ffffff; }
+.breadcrumb-container-video span { color: #ffffff; text-decoration: none; }
+.breadcrumb-container-video a:hover { color: #ffffff; }
+
+.project-video-hero {
+    background-color: #000000;
+    padding: 60px 215px 60px 215px;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+
+.project-video-content {
+    background-color: #000000;
+    padding: 0px 0;
+}
+.project-video-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 2.5fr 1px 1.5fr;
+    gap: 60px;
+    align-items: flex-start;
+    position: relative;
+}
+.project-video-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1100px;
+}
+.project-video-right {
+    padding-left: 340px;
+    margin-top: 190px;
+}
+
+.project-video-container::before {
+    content: '';
+    position: absolute;
+    left: 65%;
+    top: 200px;
+    width: 2px;
+    height: calc(100% - 200px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.project-video-title {
+    font-size: 64px;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+.project-video-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.project-video-description p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+.project-video-description em {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Logiciels — label + 2 icônes côte à côte */
+.project-video-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-left: 0;
+}
+
+.tools-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 30px;
+}
+.tools-icons img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+.tools-label {
+    font-size: 60px;
+    font-weight: 600;
+    color: #999;
+    margin: 0;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+/* ==================== */
+/* RESPONSIVE */
+/* ==================== */
+@media (max-width: 1200px) {
+    .project-video-hero { padding: 40px 40px 60px; }
+    .project-video-container { padding: 0 40px; grid-template-columns: 1fr; gap: 40px; }
+    .project-video-container::before { display: none; }
+    .project-video-right { padding-left: 0; }
+    .breadcrumb-container-video { padding: 0 40px; }
+    .project-video-title { font-size: 48px; }
+}
+@media (max-width: 768px) {
+    .project-video-hero { padding: 30px 20px 40px; }
+    .project-video-container { padding: 0 50px; }
+    .breadcrumb-container-video { padding: 0 15px; font-size: 16px; }
+    .project-video-title { font-size: 32px; }
+    .project-video-description p { font-size: 16px; }
+    .tools-icons img { width: 60px; height: 60px; }
+}
+@media (max-width: 480px) {
+    .project-video-hero { padding: 20px 15px 30px; }
+    .project-video-container { padding: 0 15px; }
+    .breadcrumb-container-video { padding: 0 15px; font-size: 14px; }
+    .project-video-title { font-size: 24px; }
+    .project-video-description p { font-size: 14px; }
+    .tools-label { font-size: 28px; }
+    .tools-icons img { width: 55px; height: 55px; }
+}
+/* ---- Fil d'ariane uniformisé mobile ---- */
+@media (max-width: 768px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 480px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-video-tools {
+        align-items: flex-start !important;
+        margin-top: 30px !important;
+    }
+    .tools-label {
+        text-align: left !important;
+        font-size: 28px !important;
+    }
+    .tools-icons {
+        margin-top: 10px !important;
+    }
+    .tools-icons img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+@media (max-width: 480px) {
+    .project-video-tools {
+        align-items: flex-start !important;
+        margin-top: 30px !important;
+    }
+    .tools-label {
+        text-align: left !important;
+        font-size: 24px !important;
+    }
+    .tools-icons {
+        margin-top: 10px !important;
+    }
+    .tools-icons img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-video-right {
+        margin-top: 0 !important;
+        gap: 10px !important;
+    }
+    .project-video-tools {
+        margin-top: 10px !important;
+    }
+    .tools-icons {
+        margin-top: 5px !important;
+    }
+}
+@media (max-width: 480px) {
+    .project-video-right {
+        margin-top: 0 !important;
+        gap: 10px !important;
+    }
+    .project-video-tools {
+        margin-top: 10px !important;
+    }
+    .tools-icons {
+        margin-top: 5px !important;
+    }
+}
