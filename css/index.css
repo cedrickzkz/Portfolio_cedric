@@ -56,7 +56,6 @@
     background: #ffffff;
     color: #000000;
 }
-
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -64,6 +63,14 @@
     }
     .project-item.hide-mobile {
         display: none !important;
+    }
+    .desktop-only {
+        display: none !important;
+    }
+    .project-item a .view-button {
+        font-size: 13px !important;
+        padding: 10px 20px !important;
+        border-width: 2px !important;
     }
 }
 @media (max-width: 480px) {
@@ -74,10 +81,9 @@
     .project-item.hide-mobile {
         display: none !important;
     }
-}
-
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none !important;
+    .project-item a .view-button {
+        font-size: 12px !important;
+        padding: 8px 16px !important;
+        border-width: 2px !important;
     }
 }
