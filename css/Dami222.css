@@ -21,6 +21,11 @@
     transition: color 0.3s ease;
 }
 
+.breadcrumb-gray-link {
+    color: #999999 !important;
+    text-decoration: underline;
+}
+
 .breadcrumb-container-video a:first-child {
     color: #999999;
     text-decoration: underline;

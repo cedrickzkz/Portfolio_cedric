@@ -15,6 +15,11 @@
     color: #ffffff;
 }
 
+.breadcrumb-gray-link {
+    color: #999999 !important;
+    text-decoration: underline;
+}
+
 .breadcrumb-container-video a {
     color: #ffffff;
     text-decoration: none;
