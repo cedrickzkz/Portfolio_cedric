@@ -17,10 +17,6 @@
     transition: color 0.3s ease;
 }
 
-.breadcrumb-separator-gray {
-    color: #999999 !important;
-}
-
 .breadcrumb-container-video a:hover { color: #cccccc; }
 .breadcrumb-separator-gray { color: #999999 !important; }
 .breadcrumb-separator { color: #ffffff; }
