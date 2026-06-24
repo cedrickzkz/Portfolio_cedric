@@ -11,7 +11,7 @@
     margin: 0 auto;
     padding: 0 60px;
     font-size: 20px;
-    color: #999;
+    color: #ffffff;
 }
 .breadcrumb-container-video a { color: #999; text-decoration: underline; transition: color 0.3s ease; }
 .breadcrumb-container-video a:first-child { color: #999999; text-decoration: underline; }
@@ -20,6 +20,9 @@
 .breadcrumb-separator { color: #ffffff; }
 .breadcrumb-container-video span { color: #ffffff; text-decoration: none; }
 .breadcrumb-container-video a:hover { color: #ffffff; }
+.breadcrumb-separator-gray {
+    color: #999999 !important;
+}
 
 .project-video-hero {
     background-color: #000000;
