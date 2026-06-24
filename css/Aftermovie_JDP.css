@@ -17,9 +17,8 @@
 
 .breadcrumb-gray-link {
     color: #999999 !important;
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
-
 .breadcrumb-container-video a {
     color: #ffffff;
     text-decoration: none;
