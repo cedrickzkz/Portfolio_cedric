@@ -1,6 +1,26 @@
 /* ==================== */
 /* APROPOS.CSS          */
 /* ==================== */
+
+.breadcrumb-section {
+    background-color: #000000;
+    padding: 120px 0 20px;
+}
+.breadcrumb-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.breadcrumb-container a {
+    color: #999999;
+    text-decoration: underline;
+}
+.breadcrumb-separator-gray {
+    color: #999999 !important;
+}
+
 .apropos-main { background-color: #000000; }
 
 .apropos-hero {
