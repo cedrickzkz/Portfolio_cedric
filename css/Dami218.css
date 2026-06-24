@@ -21,6 +21,10 @@
     color: #999;
 }
 
+.breadcrumb-separator-gray {
+    color: #999999 !important;
+}
+
 .breadcrumb-container a {
     color: #999;
     text-decoration: underline;
