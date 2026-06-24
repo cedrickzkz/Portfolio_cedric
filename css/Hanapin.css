@@ -35,6 +35,11 @@
     color: #999999 !important;
 }
 
+.breadcrumb-gray-link {
+    color: #999999 !important;
+    text-decoration: underline;
+}
+
 .breadcrumb-separator {
     color: #ffffff;
 }
