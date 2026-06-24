@@ -21,6 +21,10 @@
 .breadcrumb-container a:hover { color: #cccccc; }
 .breadcrumb-container span { color: #ffffff; }
 
+.breadcrumb-separator-gray {
+    color: #999999 !important;
+}
+
 /* Titre */
 .motion-hero {
     background-color: #000000;
