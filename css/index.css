@@ -56,29 +56,25 @@ display: inline-block;
 background: #ffffff;
 color: #000000;
 }
+
+/* Cache les 4eme et 5eme projets sur ordi/tablette uniquement */
+.project-item.desktop-hide-last-two {
+display: none;
+}
+
 @media (max-width: 768px) {
 .projects-grid {
-display: flex !important;
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
--webkit-overflow-scrolling: touch;
-scrollbar-width: none;
+grid-template-columns: repeat(2, 1fr) !important;
 gap: 10px !important;
-padding-bottom: 5px;
-    }
-.projects-grid::-webkit-scrollbar {
-display: none;
-    }
-.projects-grid .project-item {
-flex: 0 0 75%;
-scroll-snap-align: start;
     }
 .project-item.hide-mobile {
 display: none !important;
     }
 .desktop-only {
 display: none !important;
+    }
+.project-item.desktop-hide-last-two {
+display: block;
     }
 .project-item a .view-button {
 font-size: 13px !important;
@@ -88,24 +84,14 @@ border-width: 2px !important;
 }
 @media (max-width: 480px) {
 .projects-grid {
-display: flex !important;
-overflow-x: auto;
-overflow-y: hidden;
-scroll-snap-type: x mandatory;
--webkit-overflow-scrolling: touch;
-scrollbar-width: none;
+grid-template-columns: repeat(2, 1fr) !important;
 gap: 8px !important;
-padding-bottom: 5px;
-    }
-.projects-grid::-webkit-scrollbar {
-display: none;
-    }
-.projects-grid .project-item {
-flex: 0 0 80%;
-scroll-snap-align: start;
     }
 .project-item.hide-mobile {
 display: none !important;
+    }
+.project-item.desktop-hide-last-two {
+display: block;
     }
 .project-item a .view-button {
 font-size: 12px !important;
