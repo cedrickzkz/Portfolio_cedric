@@ -197,3 +197,25 @@
         font-size: 11px !important;
     }
 }
+
+/* ---- Fil d'ariane uniformisé mobile ---- */
+@media (max-width: 768px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 14px !important;
+    }
+}
+@media (max-width: 480px) {
+    .breadcrumb-section,
+    .breadcrumb-section-video {
+        padding: 100px 0 20px !important;
+    }
+    .breadcrumb-container,
+    .breadcrumb-container-video {
+        font-size: 16px !important;
+    }
+}
