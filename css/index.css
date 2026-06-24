@@ -64,8 +64,21 @@ display: none;
 
 @media (max-width: 768px) {
 .projects-grid {
-grid-template-columns: repeat(2, 1fr) !important;
+display: flex !important;
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+-webkit-overflow-scrolling: touch;
+scrollbar-width: none;
 gap: 10px !important;
+padding-bottom: 5px;
+    }
+.projects-grid::-webkit-scrollbar {
+display: none;
+    }
+.projects-grid .project-item {
+flex: 0 0 calc(50% - 5px);
+scroll-snap-align: start;
     }
 .project-item.hide-mobile {
 display: none !important;
@@ -84,8 +97,21 @@ border-width: 2px !important;
 }
 @media (max-width: 480px) {
 .projects-grid {
-grid-template-columns: repeat(2, 1fr) !important;
+display: flex !important;
+overflow-x: auto;
+overflow-y: hidden;
+scroll-snap-type: x mandatory;
+-webkit-overflow-scrolling: touch;
+scrollbar-width: none;
 gap: 8px !important;
+padding-bottom: 5px;
+    }
+.projects-grid::-webkit-scrollbar {
+display: none;
+    }
+.projects-grid .project-item {
+flex: 0 0 calc(50% - 4px);
+scroll-snap-align: start;
     }
 .project-item.hide-mobile {
 display: none !important;
