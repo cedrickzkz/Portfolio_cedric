@@ -16,14 +16,9 @@
 }
 
 .breadcrumb-container a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.breadcrumb-container a:first-child {
     color: #999999;
     text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 .breadcrumb-container span {
