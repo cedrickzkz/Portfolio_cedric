@@ -22,7 +22,7 @@
 }
 
 .breadcrumb-separator-gray {
-    color: #999999;
+    color: #999999 !important;
 }
 
 .breadcrumb-container span {
