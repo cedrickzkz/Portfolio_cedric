@@ -21,6 +21,10 @@
     transition: color 0.3s ease;
 }
 
+.breadcrumb-separator-gray {
+    color: #999999;
+}
+
 .breadcrumb-container span {
     color: #ffffff;
 }
