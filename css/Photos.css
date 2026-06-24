@@ -16,9 +16,16 @@
 }
 
 .breadcrumb-container a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: #999999;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator-gray {
+    color: #999999 !important;
+}
+
+.breadcrumb-separator-white {
+    color: #ffffff !important;
 }
 
 .breadcrumb-container a:first-child {
