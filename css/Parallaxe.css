@@ -12,11 +12,14 @@
     margin: 0 auto;
     padding: 0 60px;
     font-size: 20px;
-    color: #999;
+    color: #ffffff;
 }
 .breadcrumb-container a { color: #999; text-decoration: underline; transition: color 0.3s ease; }
 .breadcrumb-container a:hover { color: #fff; }
 .breadcrumb-container span { color: #ffffff; text-decoration: none; }
+.breadcrumb-separator-gray {
+    color: #999999 !important;
+}
 
 .project-hero {
     background-color: #000000;
