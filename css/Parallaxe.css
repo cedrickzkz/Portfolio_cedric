@@ -170,3 +170,57 @@
         font-size: 16px !important;
     }
 }
+
+/* ---- Logiciels uniformisés mobile ---- */
+@media (max-width: 768px) {
+    .tools-label,
+    .pv-tools-label {
+        font-size: 24px !important;
+        text-align: left !important;
+    }
+    .tools-icons img,
+    .pv-tools-icons img,
+    .tool-icon {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .tools-icons,
+    .pv-tools-icons {
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        justify-content: flex-start !important;
+    }
+    .project-video-tools,
+    .project-tools,
+    .pv-tools {
+        align-items: flex-start !important;
+        gap: 10px !important;
+        margin-top: 10px !important;
+    }
+}
+@media (max-width: 480px) {
+    .tools-label,
+    .pv-tools-label {
+        font-size: 24px !important;
+        text-align: left !important;
+    }
+    .tools-icons img,
+    .pv-tools-icons img,
+    .tool-icon {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .tools-icons,
+    .pv-tools-icons {
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        justify-content: flex-start !important;
+    }
+    .project-video-tools,
+    .project-tools,
+    .pv-tools {
+        align-items: flex-start !important;
+        gap: 10px !important;
+        margin-top: 10px !important;
+    }
+}
