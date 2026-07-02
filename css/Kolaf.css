@@ -166,6 +166,14 @@
     .tool-icon { width: 80px !important; height: 80px !important; }
 }
 
+/* ---- Fix vidéo même taille que les photos ---- */
+.gallery-item video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+}
+
 /* ---- Logiciels uniformisés mobile ---- */
 @media (max-width: 768px) {
     .tools-label,
