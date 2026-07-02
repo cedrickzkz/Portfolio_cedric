@@ -165,11 +165,20 @@
 }
 
 /* ---- Fix vidéo même taille que les photos ---- */
-.gallery-item video {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    display: block;
+@media (max-width: 768px) {
+    .gallery-item video {
+        width: auto !important;
+        height: 500px !important;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item video {
+        width: auto !important;
+        height: 400px !important;
+        object-fit: cover;
+    }
 }
 
 /* ---- Logiciels uniformisés mobile ---- */
