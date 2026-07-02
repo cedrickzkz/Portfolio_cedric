@@ -82,14 +82,12 @@
     width: max-content;
 }
 
-.gallery-item {
+.gallery-item video {
+    width: 500px !important;
+    height: 500px !important;
+    object-fit: cover;
+    display: block;
     flex-shrink: 0;
-    width: 500px;
-    height: 600px;
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .gallery-item img,
