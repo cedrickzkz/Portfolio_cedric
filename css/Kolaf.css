@@ -167,17 +167,17 @@
 /* ---- Fix vidéo même taille que les photos ---- */
 @media (max-width: 768px) {
     .gallery-item video {
-        width: auto !important;
-        height: 500px !important;
-        object-fit: cover;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain;
     }
 }
 
 @media (max-width: 480px) {
     .gallery-item video {
-        width: auto !important;
-        height: 400px !important;
-        object-fit: cover;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain;
     }
 }
 
