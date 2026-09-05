@@ -57,6 +57,13 @@
     width: 100%;
 }
 
+.gallery-item video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
 .gallery-scroll {
     width: 100%;
     overflow-x: auto;
