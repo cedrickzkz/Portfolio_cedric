@@ -120,5 +120,36 @@
     </footer>
 
     <script src="js/hamburger.js"></script>
+    <script>
+        // Drag to scroll sur la galerie
+        const galleryScroll = document.querySelector('.gallery-scroll');
+        if (galleryScroll) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            galleryScroll.addEventListener('mousedown', (e) => {
+                isDown = true;
+                galleryScroll.style.cursor = 'grabbing';
+                startX = e.pageX - galleryScroll.offsetLeft;
+                scrollLeft = galleryScroll.scrollLeft;
+            });
+            galleryScroll.addEventListener('mouseleave', () => {
+                isDown = false;
+                galleryScroll.style.cursor = 'grab';
+            });
+            galleryScroll.addEventListener('mouseup', () => {
+                isDown = false;
+                galleryScroll.style.cursor = 'grab';
+            });
+            galleryScroll.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - galleryScroll.offsetLeft;
+                const walk = (x - startX) * 2;
+                galleryScroll.scrollLeft = scrollLeft - walk;
+            });
+        }
+    </script>
 </body>
 </html>
