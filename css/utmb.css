@@ -88,8 +88,8 @@
 /* Desktop */
 .gallery-item {
     flex-shrink: 0 !important;
-    width: 420px !important;
-    height: 747px !important;
+    width: 500px !important;
+    height: 889px !important;
     background-color: #000000;
     display: flex;
     align-items: center;
@@ -100,8 +100,8 @@
 /* Tablette */
 @media (max-width: 1024px) {
     .gallery-item {
-        width: 500px !important;
-        height: 809px !important;
+        width: 380px !important;
+        height: 676px !important;
     }
 }
 
