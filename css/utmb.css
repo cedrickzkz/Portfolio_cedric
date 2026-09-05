@@ -87,8 +87,8 @@
 
 .gallery-item {
     flex-shrink: 0 !important;
-    width: 300px !important;
-    height: 533px !important; /* ratio 9:16 */
+    width: 420px !important;
+    height: 747px !important; /* ratio 9:16 */
     background-color: #000000;
     display: flex;
     align-items: center;
