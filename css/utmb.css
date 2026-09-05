@@ -108,8 +108,8 @@
 /* Mobile */
 @media (max-width: 768px) {
     .gallery-item {
-        width: 220px !important;
-        height: 391px !important;
+        width: 450px !important;
+        height: 800px !important;
     }
 }
 
