@@ -100,23 +100,23 @@
 /* Tablette */
 @media (max-width: 1024px) {
     .gallery-item {
-        width: 320px !important;
-        height: 569px !important;
+        width: 500px !important;
+        height: 809px !important;
     }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
     .gallery-item {
-        width: 450px !important;
-        height: 800px !important;
+        width: 300px !important;
+        height: 533px !important;
     }
 }
 
 @media (max-width: 480px) {
     .gallery-item {
-        width: 180px !important;
-        height: 320px !important;
+        width: 260px !important;
+        height: 462px !important;
     }
 }
 
