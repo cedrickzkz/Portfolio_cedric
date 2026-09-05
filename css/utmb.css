@@ -85,15 +85,34 @@
     box-sizing: border-box !important;
 }
 
+/* Desktop */
 .gallery-item {
     flex-shrink: 0 !important;
     width: 420px !important;
-    height: 747px !important; /* ratio 9:16 */
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    height: 747px !important;
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+    .gallery-item {
+        width: 320px !important;
+        height: 569px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 220px !important;
+        height: 391px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 180px !important;
+        height: 320px !important;
+    }
 }
 
 .gallery-item img {
